@@ -1,0 +1,7 @@
+add 14, ana, mere, 15
+add 15, aaa, bbb, 12
+add 16, fff, ccc, 11
+add 17, rrr, jjj, 10
+add 18, kkk, aaa, 9
+add 19, ooo, ttt, 8
+list 13

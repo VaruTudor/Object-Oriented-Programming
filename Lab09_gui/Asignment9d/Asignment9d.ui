@@ -1,0 +1,29 @@
+<UI version="4.0" >
+ <class>Asignment9dClass</class>
+ <widget class="QMainWindow" name="Asignment9dClass" >
+  <property name="objectName" >
+   <string notr="true">Asignment9dClass</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>600</width>
+	<height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Asignment9d</string>
+  </property>
+  <widget class="QMenuBar" name="menuBar" />
+  <widget class="QToolBar" name="mainToolBar" />
+  <widget class="QWidget" name="centralWidget" />
+  <widget class="QStatusBar" name="statusBar" />
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources>
+   <include location="Asignment9d.qrc"/>
+ </resources>
+ <connections/>
+</UI>

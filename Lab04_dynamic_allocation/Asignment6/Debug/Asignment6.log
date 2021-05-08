@@ -1,0 +1,20 @@
+﻿  dynamic_container.c
+  main.c
+  repository.c
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\repository.c(24,14): warning C4098: 'destroy_repository': 'void' function returning a value
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\repository.c(75,14): warning C4047: 'return': 'int' differs in levels of indirection from 'void *'
+  repository_dynamic_containers.c
+  service.c
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\service.c(86,8): warning C4013: 'printf' undefined; assuming extern returning int
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\service.c(111,48): error C2223: left of '->year_of_creation' must point to struct/union
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\service.c(122,50): error C2223: left of '->state_of_deterioration' must point to struct/union
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\service.c(122,109): error C2223: left of '->state_of_deterioration' must point to struct/union
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\service.c(122,131): error C2198: 'strcmp': too few arguments for call
+  ui.c
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\ui.c(26,1): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(1274): message : see declaration of 'scanf'
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\ui.c(61,1): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(440): message : see declaration of 'strtok'
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment4\Asignment6\ui.c(66,1): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(440): message : see declaration of 'strtok'
+  Generating Code...

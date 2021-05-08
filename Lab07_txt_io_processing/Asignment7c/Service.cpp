@@ -1,0 +1,177 @@
+#include "Service.h"
+#include <assert.h>
+
+std::vector<Victim> Service::get_all_victims() const
+{
+	return this->repository.get_victims();
+}
+
+std::vector<Victim> Service::get_all_victims_assistant() const
+{
+	return this->assistant_repository.get_victims();
+}
+
+void Service::add_victim_service(const std::string& name, const std::string& place_of_origin, int age, const std::string& photograph)
+{
+	Victim victim{ name, place_of_origin, age, photograph };
+
+	this->repository.add_victim(victim);
+}
+
+void Service::add_victim_to_assistant_service(const std::string& name)
+{
+	std::vector<Victim> victims = this->get_all_victims();
+	for ( Victim victim : victims)
+	{
+		if (victim.get_name().compare(name) == 0)
+		{
+			this->assistant_repository.add_victim(victim);
+		}
+	}
+}
+
+void Service::remove_victim_service(const std::string& name)
+{
+	this->repository.remove_victim_repository(name);
+}
+
+void Service::update_victim_service(const std::string& name, const std::string& place_of_origin, int age, const std::string& photograph)
+{
+	Victim victim{ name, place_of_origin, age, photograph };
+
+	this->repository.update_victim_repository(victim);
+}
+
+
+int Service::get_number_of_victims()
+{
+	return this->get_all_victims().size();
+}
+
+void Service::set_file_path(std::string file_path)
+{
+	FileRepository new_repository{ file_path };
+	this->repository = new_repository;
+}
+
+//----------------------------------TESTS----------------------------------
+
+
+void add_victim_service__Valid_input__Victim_is_added()
+{
+	FileRepository repository{ "C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment7c\\Asignment7c\\tests.txt" };
+	Repository assistant_repository{};
+	Service service{ repository,assistant_repository };
+
+	service.add_victim_service("aa", "bb", 1, "cc");
+
+	assert(service.get_all_victims().size() == 1);
+
+	service.remove_victim_service("aa");
+}
+
+
+void remove_victim_service__Valid_input__Victim_is_removed()
+{
+	FileRepository repository{ "C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment7c\\Asignment7c\\tests.txt" };
+	Repository assistant_repository{};
+	Service service{ repository,assistant_repository };
+
+	service.add_victim_service("aa", "bb", 1, "cc");
+
+	service.remove_victim_service("aa");
+
+	assert(service.get_all_victims().size() == 0);
+}
+
+void remove_victim_service__Not_valid_input__Victim_is_not_removed()
+{
+	FileRepository repository{ "C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment7c\\Asignment7c\\tests.txt" };
+	Repository assistant_repository{};
+	Service service{ repository,assistant_repository };
+
+	service.add_victim_service("aa", "bb", 1, "cc");
+
+	service.remove_victim_service("bb");
+
+	assert(service.get_all_victims().size() == 1);
+
+	service.remove_victim_service("aa");
+}
+
+void update_victim_service__Valid_input__Victim_is_updated()
+{
+	FileRepository repository{ "C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment7c\\Asignment7c\\tests.txt" };
+	Repository assistant_repository{};
+	Service service{ repository,assistant_repository };
+
+	service.add_victim_service("aa", "bb", 1, "cc");
+
+	service.update_victim_service("aa", "cc", 2, "dd");
+	Victim victim{ "aa", "cc", 2, "dd" };
+
+	assert(service.get_all_victims().at(0).victim_to_string() == victim.victim_to_string());
+
+	service.remove_victim_service("aa");
+}
+
+void update_victim_service__Not_valid_input__Victim_is_not_updated()
+{
+	FileRepository repository{ };
+	Repository assistant_repository{};
+	Service service{ repository,assistant_repository };
+
+	service.set_file_path("C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment7c\\Asignment7c\\tests.txt");
+
+	service.add_victim_service("aa", "bb", 1, "cc");
+	Victim victim{ "aa", "bb", 1, "cc" };
+
+	service.update_victim_service("bb", "cc", 2, "dd");
+
+	assert(service.get_all_victims().at(0).victim_to_string() == victim.victim_to_string());
+
+	service.remove_victim_service("aa");
+}
+
+void get_number_of_victims__Valid_input__Number_of_victims_is_returned()
+{
+	FileRepository repository{ "C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment7c\\Asignment7c\\tests.txt" };
+	Repository assistant_repository{};
+	Service service{ repository,assistant_repository };
+
+	service.add_victim_service("aa", "bb", 1, "cc");
+
+	assert(service.get_number_of_victims() == service.get_all_victims().size());
+
+	service.remove_victim_service("aa");
+}
+
+void add_victim_to_assistant_service__Valid_input__Victim_is_added_to_assistant_list()
+{
+	FileRepository repository{ "C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment7c\\Asignment7c\\tests.txt" };
+	Repository assistant_repository{};
+	Service service{ repository,assistant_repository };
+
+	service.add_victim_service("aa", "bb", 1, "cc");
+
+	service.add_victim_to_assistant_service("aa");
+
+	assert(service.get_all_victims_assistant().at(0).victim_to_string() == "aa, bb, 1, cc");
+
+	service.remove_victim_service("aa");
+}
+
+void test_service()
+{
+	add_victim_service__Valid_input__Victim_is_added();
+
+	remove_victim_service__Valid_input__Victim_is_removed();
+	remove_victim_service__Not_valid_input__Victim_is_not_removed();
+
+	update_victim_service__Valid_input__Victim_is_updated();
+	update_victim_service__Not_valid_input__Victim_is_not_updated();
+
+	get_number_of_victims__Valid_input__Number_of_victims_is_returned();
+	add_victim_to_assistant_service__Valid_input__Victim_is_added_to_assistant_list();
+
+}

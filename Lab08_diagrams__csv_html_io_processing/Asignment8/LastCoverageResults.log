@@ -1,0 +1,21 @@
+[2020-04-22 16:50:25] [info] Start Program:
+Path:"C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment8\\Debug\\Asignment8.exe"
+Arguments:
+Working directory: "C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment8\\Asignment8\\"
+Modules: Selected: C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment8\Debug\Asignment8.exe Excluded: 
+Sources: Selected: C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment8\Asignment8 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\Tudor\AppData\Local\Temp\c3rmenjx.xko 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2020-04-22 16:50:25] [info] Module: C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment8\Debug\Asignment8.exe is selected because it matches selected pattern: C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment8\Debug\Asignment8.exe
+[2020-04-22 16:50:25] [info] ----------------------------------------------------
+[2020-04-22 16:50:25] [info] Coverage binary generated in file: C:\Users\Tudor\AppData\Local\Temp\c3rmenjx.xko
+[2020-04-22 16:50:25] [info] ----------------------------------------------------

@@ -1,0 +1,21 @@
+[2020-04-15 12:32:34] [info] Start Program:
+Path:"C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment7c\\Debug\\Asignment7c.exe"
+Arguments:
+Working directory: "C:\\Users\\Tudor\\Desktop\\D\\faculta\\SemII\\OOP\\Laboratories\\Asignment7c\\Asignment7c\\"
+Modules: Selected: C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment7c\Debug\Asignment7c.exe Excluded: 
+Sources: Selected: C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment7c\Asignment7c Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\Tudor\AppData\Local\Temp\5mxru0rp.2kd 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2020-04-15 12:32:34] [info] Module: C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment7c\Debug\Asignment7c.exe is selected because it matches selected pattern: C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment7c\Debug\Asignment7c.exe
+[2020-04-15 12:32:34] [info] ----------------------------------------------------
+[2020-04-15 12:32:34] [info] Coverage binary generated in file: C:\Users\Tudor\AppData\Local\Temp\5mxru0rp.2kd
+[2020-04-15 12:32:34] [info] ----------------------------------------------------

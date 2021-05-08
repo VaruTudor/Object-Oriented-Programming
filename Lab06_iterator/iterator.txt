@@ -1,0 +1,136 @@
+
+class DynamicVector
+{
+private:
+	int capacity, size;
+	T* elements;
+
+
+public:
+	//!!the rule of 3
+	//(dynamically allocated memory -> destructor, copy constructor
+	//, asignmnent operator
+
+	//constructor for DynamicVector
+	DynamicVector(int capacity = 10);
+
+	//destructor
+	~DynamicVector();
+
+	//getter for the size
+	int get_size() const;
+
+	//getter for the capacity
+	int get_capacity() const;
+
+	//add an element to the DynamicVector
+	void add_to_DynamicVector(T element);
+
+	//adds an element to a position
+	void add_to_position(T element, int position);
+
+	/*
+		checks the validity of a position
+		return:
+			-1 - invalid
+			1 - valid
+	*/
+	int check_valid_position(int position);
+	
+	/*
+		removes an element from the dynamic vector using the position
+	*/
+	void remove(int position);
+
+	/*
+		removes an element from the dynamic vector using it's name
+	*/
+	void remove_using_name(const std::string& name);
+
+	T& operator[](int position);
+
+	//copy constructor
+	DynamicVector(const DynamicVector& vector);
+
+	//asignment operator
+	DynamicVector& operator = (const DynamicVector& vector);
+
+	//returns an element on position
+	T get_element(int position);
+
+private:
+	//resize in case capacity is reached
+	void resize();
+
+/*
+public:
+	
+	class Iterator
+	{
+	private:
+		T* pointer;
+
+	public:
+		//constructor
+		Iterator(T* pointer): pointer{pointer} {}
+		T& operator*();
+		bool  operator!=(const Iterator& iterator);
+
+		Iterator operator++();
+		Iterator operator++(int i);
+	};
+	typename Iterator begin();
+	typename Iterator end();
+	*/
+
+
+};
+
+
+
+
+
+
+functions:
+/*
+template<typename T>
+inline typename DynamicVector<T>::Iterator DynamicVector<T>::begin()
+{
+	//or this->elements
+	return Iterator{&this->elements[0]};
+}
+
+template<typename T>
+inline typename DynamicVector<T>::Iterator DynamicVector<T>::end()
+{
+	//or this->elements + this->size
+	return Iterator{&this->elements[this->size]};
+}
+
+template<typename T>
+inline T& DynamicVector<T>::Iterator::operator*()
+{
+	return *this->pointer;
+}
+
+template<typename T>
+inline bool DynamicVector<T>::Iterator::operator!=(const Iterator& iterator)
+{
+	return this->pointer != iterator.pointer;
+}
+
+template<typename T>
+inline DynamicVector<T>::Iterator DynamicVector<T>::Iterator::operator++()
+{
+	this->pointer++;
+	return *this;
+}
+
+template<typename T>
+inline DynamicVector<T>::Iterator DynamicVector<T>::Iterator::operator++(int i)
+{
+	Iterator auxiliar_iterator = *this;
+	this->pointer++;
+	return auxiliar_iterator;
+}
+*/

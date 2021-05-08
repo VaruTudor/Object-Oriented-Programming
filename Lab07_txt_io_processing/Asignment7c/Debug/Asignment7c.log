@@ -1,0 +1,9 @@
+﻿  Repository.cpp
+  Service.cpp
+  UI.cpp
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment7c\Asignment7c\UI.cpp(155,28): warning C4101: 'excepObj': unreferenced local variable
+  Victim.cpp
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment7c\Asignment7c\Victim.cpp(30,28): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  Generating Code...
+  Asignment7c.vcxproj -> C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment7c\Debug\Asignment7c.exe

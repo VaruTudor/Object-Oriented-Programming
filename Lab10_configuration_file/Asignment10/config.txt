@@ -1,0 +1,5 @@
+file_path = C:\Users\Tudor\Desktop\testus\a.txt
+mylist_path = C:\Users\Tudor\Desktop\testus\aa.csv
+use_file_repository_for_admin = 1
+use_file_repository_for_assistant = 1
+use_csv = 1

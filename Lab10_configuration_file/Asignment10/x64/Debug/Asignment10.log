@@ -1,0 +1,15 @@
+﻿  uic Asignment10.ui
+  rcc Asignment10.qrc
+  moc Asignment10.h
+   RCC: Warning: No resources in 'C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment10\Asignment10\Asignment10.qrc'.
+  Asignment10.cpp
+  Exceptions.cpp
+  main.cpp
+  Repository.cpp
+  Service.cpp
+  Victim.cpp
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment10\Asignment10\Repository.cpp(64): warning C4715: 'MemoryRepository::find_index_of_victim_by_name': not all control paths return a value
+C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment10\Asignment10\main.cpp(149): warning C4700: uninitialized local variable 'assistant_repository' used
+  qrc_Asignment10.cpp
+  moc_Asignment10.cpp
+  Asignment10.vcxproj -> C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\Laboratories\Asignment10\x64\Debug\Asignment10.exe
