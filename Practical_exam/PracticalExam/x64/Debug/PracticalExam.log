@@ -1,0 +1,13 @@
+﻿  Reading Qt configuration (C:\Qt\5.14.2\msvc2017_64\bin\qmake.exe)
+  uic PracticalExam.ui
+  rcc PracticalExam.qrc
+  moc PracticalExam.h
+   RCC: Warning: No resources in 'C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\PracticalExam\PracticalExam\PracticalExam.qrc'.
+  Repository.cpp
+  Controller.cpp
+  domain.cpp
+  PracticalExam.cpp
+  main.cpp
+  qrc_PracticalExam.cpp
+  moc_PracticalExam.cpp
+  PracticalExam.vcxproj -> C:\Users\Tudor\Desktop\D\faculta\SemII\OOP\PracticalExam\x64\Debug\PracticalExam.exe
